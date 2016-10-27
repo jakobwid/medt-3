@@ -1,0 +1,39 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>PHP Demo</title>
+</head>
+<body style="font-family: arial; margin:0; padding: 0;">
+<h1>Einfache Textausgabe mit echo</h1>
+
+
+	<?php echo "<h2>Hello 'world' 1</h2>"; ?>
+	<h2>
+		<?php echo "Hello \"world\" 2"; ?>
+	</h2>
+
+	<h2>
+		<?php echo 'Hello'; ?>
+		<?php echo ' "world" 2</h2>'; ?>
+	
+	<h1>Textausgabe mit Variablen</h1>
+
+
+	<?php 
+		$myString1=" Hello,";
+		$myString2=" world";
+		$myInt=12;
+		echo " <p>String1: ".$myString1. "</p>";
+		echo " <p>String2: ".$myString2. "</p>";
+		echo " <p>String1 und 2: ".$myString1 ,$myString2."</p>";
+
+		echo " <p style=\"color:tomato;\">String1: $myString1 </p>";
+		echo " <p>String2: $myString2</p>";
+		echo " <p>String1 und 2: $myString1 $myString2</p>";
+		
+		echo '<p style="color:tomato;">String1:'. $myString1.' </p>';
+		echo '<p style="color:tomato;">String1: $myString1 </p>';
+
+	?> 
+</body>
+</html>
