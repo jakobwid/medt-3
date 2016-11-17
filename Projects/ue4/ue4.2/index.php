@@ -21,14 +21,13 @@
     </style>
 </head>
 <body>
-<?php
-    echo $_SERVER['PHP_SELF'];
-?>
+
+
 <div class="container-fluid">
     <div class="row">
         <div class=" col-sm-push-2 col-xs-12 col-sm-7 col-md-4">
         <h1 >Jakob Widhalm</h1>
-            <form action="http://127.0.0.1/medt-3/Projects/ue4/ue4.2/index.php" method="Post">
+            <form action="http://127.0.0.1/medt-3/Projects/ue4/ue4.2/index.php" method="post">
                 <div class="form-group">
                     <label for="exampleInputPassword1" >Vorname</label>
                     <input type="text" class="form-control" name="vn" id="exampleInputPassword1" placeholder="Vorname">
@@ -45,38 +44,38 @@
             </form>
         </div>
     </div>
-    
-<?php
-if(isset($_GET['email']))
-                {
-?>
+
+    <?php
+        if(isset($_POST['vn']))
+        {
+    ?>
     <div class="row" style="margin-top:50px;">
         <div class="col-sm-push-2 col-xs-12 col-sm-7 col-md-4">
             <div style="background-color: rgba(0,255,0,0.4);" class="panel panel-default">
               <div class="panel-heading">Your input</div>
               <div class="panel-body">
                 <?php
-                if(isset($_GET['vn']))
+                if(isset($_POST['vn']))
                 {
-                    echo "<p><span style='font-weight: bold;'>Vorname:</span> " .$_GET['vn']."</p>";
+                    echo "<p><span style='font-weight: bold;'>Vorname:</span> " . $_POST['vn']."</p>";
                 }
                 ?>
 
               </div>
               <div class="panel-body">
                 <?php
-                if(isset($_GET['nn']))
+                if(isset($_POST['nn']))
                 {
-                    echo "<p><span style='font-weight: bold;'>Nachname:</span>  ".$_GET['nn']. "</p>";
+                    echo "<p><span style='font-weight: bold;'>Nachname:</span>  ".$_POST['nn']. "</p>";
                 }
                 ?>
               </div>
               <div class="panel-body">
                 <?php
 
-                if(isset($_GET['email']))
+                if(isset($_POST['email']))   
                 {
-                     echo "<p><span style='font-weight: bold;'>Email:</span>  " .$_GET['email']."</p>";
+                     echo "<p><span style='font-weight: bold;'>Email:</span>  " .$_POST['email']."</p>";
                 }
                 ?>
               </div>
@@ -84,7 +83,7 @@ if(isset($_GET['email']))
         </div>
     </div>
     <?php
-}
+       }
     ?>
 </div>
 
