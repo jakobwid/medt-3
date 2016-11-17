@@ -21,11 +21,14 @@
     </style>
 </head>
 <body>
+<?php
+    echo $_SERVER['PHP_SELF'];
+?>
 <div class="container-fluid">
     <div class="row">
         <div class=" col-sm-push-2 col-xs-12 col-sm-7 col-md-4">
         <h1 >Jakob Widhalm</h1>
-            <form action="http://127.0.0.1/medt/ue4/ue4.2" method="Post">
+            <form action="http://127.0.0.1/medt-3/Projects/ue4/ue4.2/index.php" method="Post">
                 <div class="form-group">
                     <label for="exampleInputPassword1" >Vorname</label>
                     <input type="text" class="form-control" name="vn" id="exampleInputPassword1" placeholder="Vorname">
@@ -44,7 +47,7 @@
     </div>
     
 <?php
-if(isset($_Post['email']))
+if(isset($_GET['email']))
                 {
 ?>
     <div class="row" style="margin-top:50px;">
@@ -53,27 +56,27 @@ if(isset($_Post['email']))
               <div class="panel-heading">Your input</div>
               <div class="panel-body">
                 <?php
-                if(isset($_Post['vn']))
+                if(isset($_GET['vn']))
                 {
-                    echo "<p><span style='font-weight: bold;'>Vorname:</span> " .$_Post['vn']."</p>";
+                    echo "<p><span style='font-weight: bold;'>Vorname:</span> " .$_GET['vn']."</p>";
                 }
                 ?>
 
               </div>
               <div class="panel-body">
                 <?php
-                if(isset($_Post['nn']))
+                if(isset($_GET['nn']))
                 {
-                    echo "<p><span style='font-weight: bold;'>Nachname:</span>  ".$_Post['nn']. "</p>";
+                    echo "<p><span style='font-weight: bold;'>Nachname:</span>  ".$_GET['nn']. "</p>";
                 }
                 ?>
               </div>
               <div class="panel-body">
                 <?php
 
-                if(isset($_Post['email']))
+                if(isset($_GET['email']))
                 {
-                     echo "<p><span style='font-weight: bold;'>Email:</span>  " .$_Post['email']."</p>";
+                     echo "<p><span style='font-weight: bold;'>Email:</span>  " .$_GET['email']."</p>";
                 }
                 ?>
               </div>
