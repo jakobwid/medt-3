@@ -46,7 +46,7 @@
     </div>
 
     <?php
-        if(isset($_POST['vn']))
+        if(isset($_POST['submitBtn']))
         {
     ?>
     <div class="row" style="margin-top:50px;">

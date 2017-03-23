@@ -1,0 +1,9 @@
+AuthType Basic
+AuthName "Service-Bereich"
+AuthUserFile C:\xampp\htdocs\Medt-3\Projects\ue7\ue7.2\.htpasswd
+Require valid-user
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ index.php [NC,L]
+</IfModule>
